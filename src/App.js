@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./styles/app.sass";
 import Page from "./components/Page";
 import Home from "./screens/Home";
@@ -13,120 +13,130 @@ import Profile from "./screens/Profile";
 import ProfileEdit from "./screens/ProfileEdit";
 import Item from "./screens/Item";
 import PageList from "./screens/PageList";
+import Store from "./screens/Store";
 
 function App() {
   return (
     <Router>
-      <Switch>
+      <Routes>
         <Route
           exact
           path="/"
-          render={() => (
+          element={
             <Page>
               <Home />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/upload-variants"
-          render={() => (
+          element={
             <Page>
               <UploadVariants />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/upload-details"
-          render={() => (
+          element={
             <Page>
               <UploadDetails />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/connect-wallet"
-          render={() => (
+          element={
             <Page>
               <ConnectWallet />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/faq"
-          render={() => (
+          element={
             <Page>
               <Faq />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/activity"
-          render={() => (
+          element={
             <Page>
               <Activity />
             </Page>
-          )}
+          }
         />
         <Route
           exact
-          path="/search01"
-          render={() => (
+          path="/gallery"
+          element={
             <Page>
               <Search01 />
             </Page>
-          )}
+          }
+        />
+        <Route
+          exact
+          path="/store"
+          element={
+            <Page>
+              <Store />
+            </Page>
+          }
         />
         <Route
           exact
           path="/search02"
-          render={() => (
+          element={
             <Page>
               <Search02 />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/profile"
-          render={() => (
+          element={
             <Page>
               <Profile />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/profile-edit"
-          render={() => (
+          element={
             <Page>
               <ProfileEdit />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/item"
-          render={() => (
+          element={
             <Page>
               <Item />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/pagelist"
-          render={() => (
+          element={
             <Page>
               <PageList />
             </Page>
-          )}
+          }
         />
-      </Switch>
+      </Routes>
     </Router>
   );
 }

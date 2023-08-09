@@ -14,14 +14,14 @@ const menu = [
     title: "Coinbase Wallet",
     color: "#3772FF",
   },
-  {
-    title: "MyEtherWallet",
-    color: "#45B26B",
-  },
-  {
-    title: "Wallet Connect",
-    color: "#EF466F",
-  },
+  // {
+  //   title: "MyEtherWallet",
+  //   color: "#45B26B",
+  // },
+  // {
+  //   title: "Wallet Connect",
+  //   color: "#EF466F",
+  // },
 ];
 
 const Connect = () => {
@@ -58,7 +58,7 @@ const Connect = () => {
               </div>
             ))}
           </div>
-          <div className={styles.wrapper}>
+          {/* <div className={styles.wrapper}>
             <div className={styles.bg}>
               <img
                 srcSet="/images/content/connect-bg@2x.jpg 2x"
@@ -115,7 +115,7 @@ const Connect = () => {
                 </button>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

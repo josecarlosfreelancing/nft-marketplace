@@ -9,16 +9,16 @@ import Theme from "../Theme";
 
 const items = [
   {
-    title: "Crypter.",
+    title: "Gamebop",
     menu: [
       {
-        title: "Discover",
-        url: "/search01",
+        title: "Gallery",
+        url: "/gallery",
       },
-      {
-        title: "Connect wallet",
-        url: "/connect-wallet",
-      },
+      // {
+      //   title: "Connect wallet",
+      //   url: "/connect-wallet",
+      // },
     ],
   },
   {
@@ -29,8 +29,8 @@ const items = [
         url: "/faq",
       },
       {
-        title: "Create item",
-        url: "/upload-variants",
+        title: "Home",
+        url: "/",
       },
     ],
   },
@@ -40,6 +40,7 @@ const Footers = () => {
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     alert();
   };
 
@@ -56,7 +57,7 @@ const Footers = () => {
                 alt="Fitness Pro"
               />
             </Link>
-            <div className={styles.info}>The New Creative Economy.</div>
+            <div className={styles.info}>The NFT Markeplace MVP</div>
             <div className={styles.version}>
               <div className={styles.details}>Dark theme</div>
               <Theme className="theme-big" />
@@ -86,7 +87,7 @@ const Footers = () => {
         </div>
         <div className={styles.foot}>
           <div className={styles.copyright}>
-            Copyright © 2021 UI8 LLC. All rights reserved
+            Copyright © 2022 Gamebop. All rights reserved
           </div>
           <div className={styles.note}>
             We use cookies for better service. <a href="/#">Accept</a>
